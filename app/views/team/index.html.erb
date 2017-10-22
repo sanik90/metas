@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title gray">
+      Generated Meta
+      <a href="<%= index_path %>" class="pull-right">
+      <%= button_tag 'Generate <i class="fa fa-repeat"></i>'.html_safe, type: 'button', class: 'btn btn-xs btn-default' %>
+      </a>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <br/>
+      <div class="col-md-6">
+        <img class="image fit" src="<%= @avatar %>">
+        <br/><br/>
+      </div>
+      <div class="col-md-6">
+        <h3>
+          Meta Name:<br/>
+          <span class="red"><%= @meta_name  %></span>
+        </h3>
+        <h3>
+          Super Power:<br/>
+          <span class="red"><%= @meta_power  %></span>
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer"></div>
+</div>

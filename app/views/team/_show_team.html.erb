@@ -1,0 +1,31 @@
+<% @team_number.times do %>
+
+    <div class="row">
+      <br/>
+      <div class="col-md-6">
+        <% rand_num = rand(1..1000) %>
+        <% set = rand(1..4).to_s %>
+        <% bg = rand(1..2).to_s %>
+        <% avatar = Faker::Avatar.image(rand_num, "300x300", "png", "set#{set}", "bg#{bg}") %>
+        <img class="image fit" src="<%= avatar %>">
+        <br/><br/>
+      </div>
+
+      <div class="col-md-6">
+        <h3>
+          Meta Name:<br/>
+          <span class="red"><%= Faker::Superhero.name  %></span>
+        </h3>
+        <h3>
+          Super Power:<br/>
+          <span class="red"><%= Faker::Superhero.power  %></span>
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+      </div>
+    </div>
+
+<% end %>

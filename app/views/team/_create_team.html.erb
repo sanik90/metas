@@ -1,0 +1,22 @@
+<div class="row">
+  <br/>
+  <div class="col-md-12">
+    <%= form_tag team_create_path, :method => 'POST' do %>
+        <%= select_tag(:team_number, options_for_select([
+                                                            ['1', 1],
+                                                            ['2', 2],
+                                                            ['3', 3],
+                                                            ['4', 4],
+                                                            ['5', 5],
+                                                            ['6', 6],
+                                                            ['7', 7],
+                                                            ['8', 8],
+                                                            ['9', 9],
+                                                            ['10', 10],
+                                                        ]), class: 'form-control') %>
+
+        <br/><br/>
+        <%= submit_tag 'Build Your Team!', class: "btn btn-default" %>
+    <% end %>
+  </div>
+</div>

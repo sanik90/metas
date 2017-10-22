@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title gray"><% if @team_number > 0 %> Your Meta Team... <% else %> How Many Team Members Do You Want? <% end %></h3>
+  </div>
+  <div class="panel-body">
+    <% if @team_number > 0 %>
+        <%= render 'team/show_team' %>
+    <% else %>
+        <%= render 'team/create_team' %>
+    <% end %>
+  </div>
+  <div class="panel-footer"></div>
+</div>
